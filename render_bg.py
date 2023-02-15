@@ -12,6 +12,26 @@ from config import *
 
 half_size = 960
 # Press the green button in the gutter to run the script.
+def processing(im):
+    histr = cv2.calcHist([im], [0], None, [256], [0, 256])
+
+    im = np.array(im, np.float)
+
+    bg_value = np.argmax(histr)
+
+    im = im - bg_value
+    im[np.where(im < 0)] = 0
+
+    im = im * 255.0 / (255 - bg_value)
+
+    max_v = np.max(im)
+
+    im = im / (max_v / 255.0)
+
+    #print(np.argmax(histr), (255 / (255 - bg_value)), max_v)
+
+    return im
+
 def render_bg():
     for im_p in list(ORI_SAVE_ALL.rglob("*.jpg")):
 
@@ -19,23 +39,8 @@ def render_bg():
         #if id_cnt < 1481:
         #    continue
         im = io.imread(im_p)
-        histr = cv2.calcHist([im], [0], None, [256], [0, 256])
 
-        im = np.array(im, np.float)
-
-        bg_value = np.argmax(histr)
-
-        im = im-bg_value
-        im[np.where(im < 0)] = 0
-
-        im = im * 255.0 / (255-bg_value)
-
-        max_v = np.max(im)
-
-        im = im / (max_v/255.0)
-
-        print(np.argmax(histr), (255/(255-bg_value)), max_v)
-
+        im = processing(im)
         #im = np.array(im, np.uint8)
 
         io.imsave(RENDER_BG_SAVE_ALL / im_p.name, im)
