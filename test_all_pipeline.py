@@ -37,7 +37,7 @@ if __name__ == "__main__":
     parser.add_argument('--im_size', type=int, default=448, help='the size of image')
     parser.add_argument('--load_model', help='checkpoint you want to load for discriminator')
     parser.add_argument('--batch_size', default=32, type=int, help='Batch Size')
-    parser.add_argument('--num_classes', default=1650, type=int, help='number of classes')
+    parser.add_argument('--num_classes', default=1300, type=int, help='number of classes')
     parser.add_argument('--top_k', default=5, type=int, help='top k test')
     args = parser.parse_args()
     main_path = "./" #os.path.dirname(os.path.realpath(__file__))
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     batch_size = args.batch_size
 
     # train_root = os.path.join(main_path, args.train_set, "im")
-    test_root = TEST_PATH / "test_smaller_new.json"  # os.path.join(main_path, args.train_set, "binary")
+    test_root = TEST_PATH / "test_smaller.json"  # os.path.join(main_path, args.train_set, "binary")
     #test_root = TRAIN_PATH / "train.json"
 
 

@@ -4,8 +4,6 @@ FILE_PATH = Path(__file__).parent.resolve()
 
 PAPER_SAVE_PATH = FILE_PATH / "for_paper/"
 
-ORI_PATH = FILE_PATH / "data/ori/"#Path("./data/ori/")
-
 # annotations
 TRAIN_PATH = FILE_PATH / "data/annotations/train/" #Path("./data/train/")
 VAL_PATH = FILE_PATH / "data/annotations/val/" # Path("./data/val/")
@@ -21,7 +19,6 @@ RENDER_BG_SAVE_ALL = FILE_PATH / "data/all_render_bg/" # Path("./data/all_render
 NOBG_SAVE_ALL = FILE_PATH / "data/all_no_bg/"  # Path("./data/all_no_bg/")
 CROP_SAVE_ALL = FILE_PATH / "data/all_crop/"  # Path("./data/all_no_bg/")
 RGB_SAVE_ALL = FILE_PATH / "data/all_rgb/"  # Path("./data/all_no_bg/")
-TEST_SAVE_ALL = FILE_PATH / "data/all_test/"  # Path("./data/all_no_bg/")
 TEST_SAVEL_ALL_SMALLER = FILE_PATH / "data/all_test_smaller/"  # Path("./data/all_no_bg/")
 
 MODEL_SAVE_ONLY_AE = FILE_PATH / "results/only_ae/" # Path("./results/only_ae/")
