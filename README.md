@@ -20,7 +20,7 @@ The dataset is located in the folder `./data`, where
 
 # Running the code
 
-## 1. Create the environment using the file "puf_authentication.yml"
+## 1. Create the environment using the file `puf_authentication.yml`
 
 ## 2. Training the initial base model
 `python train_class_only_init.py`
