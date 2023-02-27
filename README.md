@@ -3,6 +3,8 @@
 ## Introduction
 This is the implementation for our paper [Random fractal-enabled physical unclonable functions with dynamic AI authentication](https://assets.researchsquare.com/files/rs-1886427/v1_covered.pdf?c=1663087331).
 
+It contains the preprocessing of the PUF patterm, training of ResNet50 based classification model, update of the model with newly added PUFs, testing dataset generation, and the test of the model on the testing dataset. Besides, the algorithms for the computation of the histgram of the PUFS and similarities between PUFs are also listed here.
+
 ## Dataset
 The dataset is located in the folder `./data`, where 
 
