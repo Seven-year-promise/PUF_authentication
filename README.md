@@ -1,4 +1,4 @@
-# ** PUF_authentication**
+# PUF authentication
 
 ## Introduction
 This is the implementation for our paper [Random fractal-enabled physical unclonable functions with dynamic AI authentication](https://assets.researchsquare.com/files/rs-1886427/v1_covered.pdf?c=1663087331).
