@@ -36,18 +36,13 @@ The dataset is located in the folder `./data`, where
 
 # For cite of thsi work:
 
-\cite{sun2022random}
-
-
+```
 @article{sun2022random,
-
 	title	=	{Random fractal-enabled physical unclonable functions with dynamic AI authentication},
-	
 	author	=	{Sun, Ningfei and Chen, Ziyu and Wang, Yanke and Wang, Shu and Xie, Yong and Liu, Qian},
-	
 	year	=	{2022}
-	
 }
+```
 
 
  
