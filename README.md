@@ -36,6 +36,8 @@ The dataset is located in the folder `./data`, where
 
 # For cite of thsi work:
 
+\cite{sun2022random}
+
 
 @article{sun2022random,
 
