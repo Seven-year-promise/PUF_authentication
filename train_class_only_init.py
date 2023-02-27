@@ -5,20 +5,15 @@ import time
 import pickle
 import csv
 from torch.utils.data import DataLoader
-import numpy as np
 import torchvision as tv, torchvision.transforms as tr
 import torch
 import torch.optim as optim
-import torchvision.transforms as transforms
-from ebm import EBM
 #import nibabel as nib
 import torch.nn as nn
-from medpy.metric.binary import dc
 from Dataloader import MyRotationTransform, CLassOnlyDataset
 from classification import Resnet50 as Classification #, CNNclassifier
 from config import *
 modes = ['train', 'val']
-import cv2
 
 criterion = nn.CrossEntropyLoss()
 sm = nn.Softmax(dim=1)

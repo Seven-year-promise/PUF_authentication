@@ -5,21 +5,15 @@ import time
 import csv
 import pickle
 from torch.utils.data import DataLoader
-import numpy as np
 import torchvision as tv, torchvision.transforms as tr
 import torch
 import torch.optim as optim
-import torchvision.transforms as transforms
-from ebm import EBM
-#import nibabel as nib
 import torch.nn as nn
-from medpy.metric.binary import dc
 from Dataloader import MyRotationTransform, CLassOnlyFeatureDataset
 from classification import Resnet50 as Classification #, CNNclassifier
 from config import *
 modes = ['train', 'val']
 
-import cv2
 
 criterion = nn.CrossEntropyLoss()
 sm = nn.Softmax(dim=1)
@@ -35,7 +29,7 @@ if __name__ == "__main__":
     parser.add_argument('--lr', type=float, default=0.0001, help='learning rate (default: 0.001)')
     parser.add_argument('--beta1', type=float, default=0.0, help='learning rate (default: 0.001)')
     parser.add_argument('--decay', type=float, default=0.9999, help='learning rate decay')
-    parser.add_argument('--acc_thre', type=float, default=96, help='the threshold of val accuracy to stop training (%)')
+    parser.add_argument('--acc_thre', type=float, default=95, help='the threshold of val accuracy to stop training (%)')
     parser.add_argument('--im_size', type=int, default=448, help='the size of image')
     parser.add_argument('--save_model', action='store_true', default=True, help='For Saving the current Model')
     parser.add_argument('--train_set', default='data/train', help='name of dataset path')
