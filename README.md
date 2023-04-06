@@ -36,7 +36,7 @@ The dataset is located in the folder `./data`, where
 ## 5. Test the model
 `python test_all_pipeline.py`
 
-# For cite of thsi work:
+# For cite of this work:
 
 ```
 @article{sun2022random,
